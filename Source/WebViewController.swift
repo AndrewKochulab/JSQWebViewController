@@ -62,7 +62,7 @@ open class WebViewController: UIViewController {
     private final let activities: [UIActivity]?
 
     private lazy final var _webView: WKWebView = {
-        let webView = WKWebView(frame: CGRect.zero, configuration: configuration)
+        let webView = WKWebView(frame: CGRect.zero)
         webView.addObserver(self, forKeyPath: titleKeyPath, options: .new, context: nil)
         webView.addObserver(self, forKeyPath: estimatedProgressKeyPath, options: .new, context: nil)
         webView.allowsBackForwardNavigationGestures = true
